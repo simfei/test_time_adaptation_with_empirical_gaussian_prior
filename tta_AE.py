@@ -194,13 +194,13 @@ def iterate_minibatches_images(images, batch_size):
 
 if __name__ == '__main__':
     # -----------------------
-    logdir_SD = 'logdir_brain/'
-    model_dir = 'models/'
+    logdir_SD = 'logdir_brain/'         # logdir of task model
+    model_dir = 'models/'               # task model dir
     logdir_AEs = ['barin_AEs/AE_NI/', 'barin_AEs/AE_conv1_2/', 'barin_AEs/AE_conv2_2/', 'barin_AEs/AE_conv3_2/',
                   'barin_AEs/AE_conv4_2/', 'barin_AEs/AE_conv5_2/', 'barin_AEs/AE_conv6_2/', 'barin_AEs/AE_conv7_2/',
-                  ]
-    logdir_TD = 'HCPT2/'
-    feature_type = 'all'
+                  ]                     # list of AE model dirs
+    logdir_TD = 'HCPT2/'                # dir of adapted models for all subjects
+    feature_type = 'all'                # use AEs trained on all intermediate feature layers for TTA, including the normalized image.
     if 'HCPT2' in logdir_TD:
         idx_start = 40
         idx_end = 45

@@ -242,12 +242,12 @@ def iterate_minibatches(images, batch_size):
 
 
 if __name__ == '__main__':
-    base_logdir = 'logdir_brain/'
-    base_model = 'models2/'
+    base_logdir = 'logdir_brain/'     # logdir of the task model
+    base_model = 'models/'            # task model dir
 
-    log_dir = 'brain_AEs/'
-    feature_type = 'conv7_2'
-    model_dir = 'AE_{}/'.format(feature_type)
+    log_dir = 'brain_AEs/'            # logdir of the AEs
+    feature_type = 'conv7_2'          # feature type
+    model_dir = 'AE_{}/'.format(feature_type)       # AE model dir
 
     if not tf.gfile.Exists(log_dir):
         tf.gfile.MakeDirs(log_dir)

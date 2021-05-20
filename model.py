@@ -59,15 +59,20 @@ def ae_loss(in_features, out_features):
     return loss
 # ----------------------------------------------------------------------------------------------------------
 
+
 # tta loss
 # ----------------------------------------------------------------------------------------------------------
+# EGP-SW
 # def tta_loss_EGP(features, mean_mean, var_mean, mean_var, var_var):
 #     return losses.egp_sw_loss(features, mean_mean, var_mean, mean_var, var_var)
 
+
+# EGP-VP
 # def tta_loss_EGP(features, means, vars):
 #     return losses.egp_loss(features, means, vars)
 
 
+# EGP-NDC
 def tta_loss_EGP(features, means, covar_inv):
     return losses.egp_ndc_loss(features, means, covar_inv)
 

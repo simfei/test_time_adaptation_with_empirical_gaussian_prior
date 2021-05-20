@@ -174,10 +174,10 @@ def iterate_minibatches_images(images, batch_size):
 if __name__ == '__main__':
     
     # -----------------------
-    logdir_SD = 'logdir_brain/'
-    model_dir = 'models/'
-    logdir_TD = 'HCPT2/'
-    feature_type = 'all'
+    logdir_SD = 'logdir_brain/'      # logdir of task model
+    model_dir = 'models/'            # task model dir
+    logdir_TD = 'HCPT2/'             # dir of adapted models for all subjects
+    feature_type = 'all'             # use priors of all intermediate feature layers for TTA, including the normalized image.
     if 'HCPT2' in logdir_TD:
         idx_start = 40
         idx_end = 45

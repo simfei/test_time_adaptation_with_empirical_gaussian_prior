@@ -98,7 +98,7 @@ def predict_seg(image, model_dir_SD, model_dir_TD=None, patname=None):
         return img_normalized, mask_predicted
 
 
-def dice_score(gt_labels, pred_labels):
+def fg_dice_score(gt_labels, pred_labels):
     score = np.mean(met.f1_score(np.array(gt_labels).flatten(), pred_labels.flatten(), average=None)[1:])
     return score
 

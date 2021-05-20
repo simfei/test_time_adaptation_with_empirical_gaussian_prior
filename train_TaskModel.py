@@ -14,8 +14,6 @@ from data_aug import augment_images_and_labels
 
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
-log_dir = 'logdir_brain/'
-model_dir = 'models/'
 
 def run_training(continue_run):
     init_step = 0
@@ -291,6 +289,8 @@ def iterate_minibatches(images, labels, batch_size, train_or_eval='train'):
 
 # ==================================================================
 def main():
+    log_dir = 'logdir_brain/'
+    model_dir = 'models/'
     continue_run = config.continue_run
     if not tf.gfile.Exists(log_dir):
         tf.gfile.MakeDirs(log_dir)
